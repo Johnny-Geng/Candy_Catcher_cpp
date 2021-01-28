@@ -17,8 +17,8 @@ void printLeaderboard(string players[], int candy[], int numplayers);
 
 /** 
  * Update the candy count of the given player to reflect the number
- * of pieces of candy they found. Do nothing (just return)
- * if the given player does not exist in the arrays already
+ * of pieces of candy they found. Do nothing if the given player does not 
+ * exist in the arrays already
  *
  * Parameters:
  *   players: Array of player names
@@ -45,8 +45,7 @@ void rainingCandy(string players[], int candy[], int numplayers);
 
 /** 
  * Cut in half all candy counts of players who are in even positions on the
- * leaderboard (0-indexed). Use integer division, since the big bully
- * is greedy and doesn't like "half" pieces of candy.
+ * leaderboard (0-indexed).
  *
  * Parameters:
  *   players: Array of player names
@@ -61,7 +60,7 @@ void theft(string players[], int candy[], int numplayers);
  * Gives one piece of candy from the top player to each other player in
  * reverse order.  Starting from the last player, Big Bully takes one 
  * piece of candy from the top player and gives it to the last place player,
- * then repeats for the second  to last player, continuing until the top 
+ * then repeats for the second to last player, continuing until the top 
  * player is out of candy or we've given one piece of candy to every other 
  * player (i.e. we've reached the 2nd place player).
  *
@@ -89,9 +88,7 @@ int findPlayer(string players[], string playerName, int numplayers);
 
 /** 
  * Prints the main menu and returns the integer selection the user 
- * wants to perform.  If the user provides an invalid selection, 
- * simply return -1 which the calling function (e.g. main() can
- * use to detect the error.
+ * wants to perform.
  *
  * Returns: integer selection of the user or -1 if the selection
  *  was invalid
@@ -101,9 +98,6 @@ int printPromptAndGetInput();
 
 /**
  * Sort the player and candy array from highest candy count to lowest.  
- *
- * We recommend one of the simplest sorting algorithms:  Selection sort
- * Look at the class notes or online resources for how to implement this.
  *
  * Parameters
  *   players: Array of player names
@@ -133,9 +127,6 @@ bool deletePlayer(string players[], int candy[], string playerName, int numplaye
 /**
  * Delete all players from the game who do not have positive candy counts. 
  * 
- * Note that when a player is deleted, the index of other players may
- * shift, so special care must be taken.
- *
  * Parameters
  *   players: Array of player names
  *   candy: Array of candy counts (candy count at location i corresponds to
@@ -147,16 +138,8 @@ bool deletePlayer(string players[], int candy[], string playerName, int numplaye
 int dropLosers(string players[], int candy[], int numplayers);
 
 /**
- * By implementing this correctly and integrating it into your
- * project so that player names are displayed with spaces, even
- * though the user enters them without spaces you can earn
- * some additional extra credit.
- * 
  * Breaks up a string at capital letters and inserts spaces 
  * So if the input is "KatnissEverdeen" return "Katniss Everdeen".
- * You may assume the first letter is a caps (and even if it
- * not you will still get a reasonable result; so "johnBrown" 
- * should still return "john Brown").
  *
  * Parameters:
  *  in: string with no spaces
@@ -166,8 +149,7 @@ int dropLosers(string players[], int candy[], int numplayers);
 string breakStringAtCaps(string in);
 
 /**********************************************************
- *  Write your implementations for each function prototyped
- *  above in the space below
+
  **********************************************************/
 
 void printLeaderboard(string players[], int candy[], int numplayers)
@@ -333,7 +315,7 @@ int dropLosers(string players[], int candy[], int numplayers)
 
 
 /**********************************************************
- *  Main must be completed by you.
+
  **********************************************************/
 int main()
 {
@@ -341,8 +323,6 @@ int main()
     string players[SIZE];
     int candy[SIZE];
     int numplayers = 0;
-
-    /* Add your code here */
 
     // Get the initial players and their candy count
     cout << "*Your prompt for number of players (1-20):*" << endl;
@@ -397,7 +377,6 @@ int main()
             choice = printPromptAndGetInput();
         }
     }
-    /* End your code here */
 
     cout << endl;
     cout << "FINAL LEADERBOARD:" << endl;
