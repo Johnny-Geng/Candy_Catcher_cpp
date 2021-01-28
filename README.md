@@ -28,10 +28,8 @@ ____
 ____
 4. Choose the event that will occur by enter the option number<br>
    1. Struck Gold: Player “x” finds “y” pieces of candy
-      - For this event option, please enter the name of players and their starting number of candies, separated by a space in the following style (case sensitive)
-      ```
-       KatnissEverdeen 4
-      ```
+      - For this event option, please enter the name of players and the number of candies, separated by a space in this style (case sensitive): 
+      ```KatnissEverdeen 4```
    2. Raining Candy: All players collect 2 pieces of candy
    3. Theft: Big Bully steals half of the candy of all even-index players (minimum 1 piece)
    4. Tough Luck: Big Bully gives one piece of candy from the top player to each other player in reverse order
